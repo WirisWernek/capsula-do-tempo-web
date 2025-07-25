@@ -1,0 +1,35 @@
+<form [formGroup]="mensagemForm" (ngSubmit)="enviar()">
+    <section>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nomeCriador" placeholder="Ex. João Silva" required />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="emailCriador" placeholder="Ex. joao.silva@example.com" required />
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput formControlName="dataEnvio" [matDatepicker]="picker" />
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </section>
+
+    <section>
+        <mat-form-field class="example-full-width">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..." formControlName="conteudo"></textarea>
+        </mat-form-field>
+    </section>
+
+    <section>
+        <button mat-raised-button color="accent" type="button" (click)="voltar()">Voltar</button>
+        @if (mode.toString() !== 'view') {
+        	<button mat-raised-button color="primary" type="submit">Salvar</button>
+        }
+    </section>
+</form>

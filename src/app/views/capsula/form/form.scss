@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+	padding-top: 1.8rem;
+}
+form{
+    width: 80%;
+}
+
+section{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 1rem;
+	justify-content: space-between;
+
+	mat-form-field:first-child{
+		flex: 1;
+	}
+}
