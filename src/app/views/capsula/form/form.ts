@@ -131,7 +131,7 @@ export class Form implements AfterViewInit {
     }
 
     voltar() {
-        this.router.navigateByUrl('/mensagem/list', { state: { capsulaID: this.capsulaId } })
+        this.router.navigateByUrl('/capsula/list', { state: { capsulaID: this.capsulaId } })
     }
 
     private loadParams() {
